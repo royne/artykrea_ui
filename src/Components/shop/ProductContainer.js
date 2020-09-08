@@ -5,6 +5,9 @@ const ProductContainer = () => {
   return ( 
     <section className="product_container">
       <Product />
+      <Product />
+      <Product />
+      <Product />
     </section>
    );
 }

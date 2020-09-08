@@ -18,6 +18,8 @@ nav{
   color: #ffffff;
   font-weight: bold;
   position: fixed;
+  background: #000000;
+  z-index: 10;
 }
 
 /* ---------------categories------------------- */
@@ -51,5 +53,30 @@ nav{
 
 .product_container{
   width: 100%;
-  /* border: 1px solid blue; */
+  padding: 5%;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product{
+  width: 30%;
+  height: 300px;
+  display: flex;
+  position: relative;
+  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+
+}
+.product>img{
+  display: flex;
+  max-width: 100%;
+}
+.product>p{
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(50%) translateY(-150%);
+  font-weight: bold;
 }
