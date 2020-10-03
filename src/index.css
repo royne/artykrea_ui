@@ -1,8 +1,10 @@
 *{
   margin: 0;
   color: #ffffff;
-   background: #000000;
+  background: #000000;
+   
 }
+
 .app{
   width: 100%;
 }
@@ -67,9 +69,10 @@ nav{
   position: relative;
   box-shadow: 0 5px 10px rgba(255, 255, 255, 0.1);
   margin-bottom: 20px;
-
+  border-radius: 50%;
 }
 .product>img{
+  border-radius: 50%;
   display: flex;
   max-width: 100%;
 }
@@ -79,4 +82,14 @@ nav{
   right: 50%;
   transform: translateX(50%) translateY(-150%);
   font-weight: bold;
+}
+
+.form_img{
+  width: 30%;
+}
+
+.btn{
+  width: 80px;
+  height: 30px;
+  background: blue;
 }

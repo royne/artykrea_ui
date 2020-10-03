@@ -1,10 +1,11 @@
 import React from 'react';
 
-const Product = () => {
+const Product = ({record}) => {
+  console.log(record.photo)
   return ( 
     <div className="product">
-      <img src="" />
-      <p>producto</p>
+      <img src={record[0].url} />
+      <p>{record[0].name}</p>
     </div>
    );
 }
