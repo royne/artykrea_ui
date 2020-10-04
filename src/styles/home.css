@@ -16,7 +16,7 @@ header>img{
   height: 20vh;
 }
 
-nav{
+.nav_header{
   width: 100%;
   display: flex;
   padding: 1% 10%;
@@ -26,7 +26,7 @@ nav{
   background: #ab2074;
   position: relative;
 }
-nav>a{
+.nav_header>a{
   font-size: 24px;
   font-weight: bold;
 }
@@ -60,7 +60,6 @@ nav>a{
   box-sizing: border-box;
   display: flex;
 }
-.slider>img{
-  max-width: 100%;
-  
+span{
+  background: transparent;
 }
