@@ -4,6 +4,7 @@ import Nav from './Nav';
 import '../../styles/home.css';
 import Social from './Social';
 import Slider from './Slider';
+import BoxCategories from './BoxCategories';
 
 const Home = () => {
   return ( 
@@ -14,6 +15,7 @@ const Home = () => {
       <section className="section_slider">
         <Slider />
       </section>
+      <BoxCategories />
     </Fragment>
    );
 }

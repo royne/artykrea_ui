@@ -63,3 +63,27 @@ header>img{
 span{
   background: transparent;
 }
+
+
+/* ---------------- categories -*------------------ */
+
+.categories{
+  width: 100%;
+  height: auto;
+  padding: 4% 10%;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+.category_box{
+  width: 100%;
+  height: 45vh;
+  display: flex;
+  margin-bottom: 50px;
+}
+.category_box:nth-of-type(4){
+  height: 75vh;
+}
+.category_box>img{
+  max-width: 100%;
+}
