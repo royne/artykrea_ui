@@ -5,6 +5,7 @@ import '../../styles/home.css';
 import Social from './Social';
 import Slider from './Slider';
 import BoxCategories from './BoxCategories';
+import Fotter from './Fotter';
 
 const Home = () => {
   return ( 
@@ -16,6 +17,7 @@ const Home = () => {
         <Slider />
       </section>
       <BoxCategories />
+      <Fotter />
     </Fragment>
    );
 }
