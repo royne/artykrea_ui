@@ -4,11 +4,11 @@ import Logo from '../../assets/images/logo_foot.png'
 
 const Fotter = () => {
   return ( 
-    <footer>
+    <footer className="footer">
       <nav className="nav_header nav_fotter">
-        <Link to="/">HOME</Link>
-        <Link to="/">QUIENES SOMOS</Link>
-        <Link to="/">CATALOGO</Link>
+        <Link to="/">nuestra empresa</Link>
+        <Link to="/">tienda virtual</Link>
+        <Link to="/">horario de atención</Link>
       </nav>
       <div className="box_links">
         <div className="box_links_info">

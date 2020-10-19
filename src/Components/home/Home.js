@@ -3,9 +3,9 @@ import Header from './Header';
 import Nav from './Nav';
 import '../../styles/home.css';
 import Social from './Social';
-import Slider from './Slider';
 import BoxCategories from './BoxCategories';
 import Fotter from './Fotter';
+import Construction from './Construction';
 
 const Home = () => {
   return ( 
@@ -13,11 +13,9 @@ const Home = () => {
       <Header />
       <Nav />
       <Social />
-      <section className="section_slider">
-        <Slider />
-      </section>
       <BoxCategories />
       <Fotter />
+      <Construction />
     </Fragment>
    );
 }
