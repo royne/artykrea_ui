@@ -1,9 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './Components/home/Home'
-import Nav from './Components/shop/Nav';
-import CategoriesBox from './Components/shop/CategoriesBox';
-import ProductContainer from './Components/shop/ProductContainer';
+import Products from './Components/products/Products';
 import Form from './Form';
 
 function App() {
@@ -11,14 +9,10 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/productos" component={Products} />
+        <Route exact path="/abc" component={Form} />
       </Switch>
     </Router>
-    // <div className="app">
-    //   {/* <Form /> */}
-    //   <Nav />
-    //   <CategoriesBox />
-    //   <ProductContainer />
-    // </div>
   );
 }
 
