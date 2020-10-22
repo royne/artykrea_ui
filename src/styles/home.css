@@ -149,7 +149,7 @@ header>img{
   display: flex;
   margin-bottom: 50px;
   cursor: pointer;
-  transition: transform .3s ease, -webkit-transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease, opacity 2s ease-in;
 }
 
 .category_box:nth-of-type(1){

@@ -1,9 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
-const Category = ({img}) => {
+const Category = ({ img, typeCategory }) => {
   return ( 
     <div className="category_box">
-      <img src={img} />
+      <Link to={`/${typeCategory}`} >
+        <img src={img} />
+      </Link>
     </div>
    );
 }
