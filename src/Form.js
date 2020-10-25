@@ -7,31 +7,39 @@ const Form = () => {
     price: '',
     qty: '',
     category_id: '',
-    photo: '',
-    url: ''
+    image: '',
+    image_url: ''
   })
 
   const getData = e => {
-    if (e.target.name !== 'photo') {
+    if (e.target.name !== 'image') {
       setData({
         ...data,
         [e.target.name]: e.target.value
       })
-    } else {
-      console.log(e.target.files[0])  
+    } else {  
       setData({
         ...data,
-        [e.target.name]: URL.createObjectURL(e.target.files[0])
+        [e.target.name]: e.target.files[0],
+        image_url: URL.createObjectURL(e.target.files[0])
       })
     }
   }
 
   const sendForm = async () => {
+    // const url = 'https://atkapi.herokuapp.com/api/v1/products'
     const url = 'http://localhost:4000/api/v1/products'
+    const formData = new FormData();
+    formData.append('product[name]', data.name);
+    formData.append('product[description]', data.description);
+    formData.append('product[price]', data.price);
+    formData.append('product[qty]', data.qty);
+    formData.append('product[category_id]', data.category_id);
+    formData.append('image_file[image]', data.image);
+    formData.append('product[published]', true);
     const request = await fetch(url, {
       method: 'POST',
-      body: JSON.stringify(data),
-      headers: { 'Content-Type': 'application/json' }
+      body: formData
     })
     const response = await request.json()
     console.log(response)
@@ -41,8 +49,7 @@ const Form = () => {
       price: '',
       qty: '',
       category_id: '',
-      photo: '',
-      url:''
+      image: ''
     })
   }
 
@@ -52,14 +59,16 @@ const Form = () => {
       <input name="description" placeholder="description" type="text" onChange={getData}/>
       <input name="price" placeholder="price" type="text" onChange={getData}/>
       <input name="qty" placeholder="qty" type="number" onChange={getData}/>
-      <input name="url" placeholder="url" type="text" onChange={getData}/>
       <select name="category_id" onChange={getData}>
         <option></option>
         <option value="1">Pines</option>
         <option value="2">Accsesorios</option>
+        <option value="3">recordatorios</option>
+        <option value="4">variedad</option>
+        <option value="5">figuras</option>
       </select>
-      <input name="photo" placeholder="photo" type="file" onChange={getData}/>
-      <img src={data.photo} alt={data.name} className="form_img"/>
+      <input name="image" placeholder="image" type="file" onChange={getData}/>
+      <img src={data.image_url} alt={data.name} className="form_img"/>
       <div onClick={sendForm} className="btn">enviar</div>
     </form>
    );

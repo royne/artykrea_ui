@@ -8,6 +8,7 @@ const BoxProducts = (props) => {
   
   useEffect(() => {
     const getProducts = () => {
+      // const url = `https://atkapi.herokuapp.com/api/v1/products?type=${category}`
       const url = `http://localhost:4000/api/v1/products?type=${category}`
       fetch(url)
         .then(response => response.json())
@@ -25,7 +26,7 @@ const BoxProducts = (props) => {
     <section className="box_products">
       <h1>{category}</h1>
       <div className="container_products">
-        {items ? items.map(elm => <Product record={elm} key={elm[0].id} />) : null}
+        {items ? items.map(elm => <Product record={elm} key={elm.id} />) : null}
       </div>
     </section> 
    );
