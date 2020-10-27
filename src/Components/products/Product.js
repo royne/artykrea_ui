@@ -6,7 +6,7 @@ const Product = ({record}) => {
     <Fragment>
       <div className="product">
         <div className="product_content">
-          <img src={record[0].url} />
+          <img src={record.image_url} />
         </div>
         <ButtonProduct />
       </div>
