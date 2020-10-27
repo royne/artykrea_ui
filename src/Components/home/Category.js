@@ -5,7 +5,7 @@ const Category = ({ img, typeCategory, index }) => {
   return (
     <label htmlFor={`s${index}`} id={`slide${index}`}>
       <Link to={`/${typeCategory}`} >
-        <img src={img} height="455" width="188" />
+        <img src={img} height="455" width="188" className="slide"/>
       </Link>
     </label> 
    );
