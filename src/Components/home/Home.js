@@ -11,13 +11,13 @@ const Home = () => {
   return ( 
     <Fragment>
       <Header />
-      <section className="container_box">
-        <Nav />
+      <Nav />
+      {/* <section className="container_box">
         <BoxCategories />
       </section>
       <Fotter />
       <Social />
-      <Construction />
+      <Construction /> */}
     </Fragment>
    );
 }

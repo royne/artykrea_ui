@@ -1,20 +1,79 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
+import styled from '@emotion/styled'
+import logo from '../../assets/images/logo_pink.png'
+
+const HeaderNav = styled.nav`
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  top: 60px;
+  left: 0;
+  box-sizing: border-box;
+  display: flex;
+  .box_logo {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    & > img {
+      max-height: 100px;
+    }
+  }
+  .box_links {
+    width: 85%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    font-family: agency;
+    font-size: 2.2rem;
+    & > a {
+      margin-right: 20px;
+    }
+  }
+`;
 
 const Nav = () => {
-  return ( 
-    <nav className="nav_header">
-      <div className="nav_box">
-        <Link to="/" className="link_nav_menu">MENU</Link>
+  return (
+    <HeaderNav className="">
+      <div className="box_logo">
+        <img src={logo} alt="Artykrea" />
       </div>
-      <div className="nav_box">
-        <Link to="/productos" className="link_nav_category">categorias</Link>
+      <div className="box_links">
+        <NavLink
+          to="/"
+          activeStyle={{
+            color: "#cf777a"
+          }}
+        >
+          MENU
+        </NavLink>
+        <NavLink
+          to="/productos"
+          activeStyle={{
+            color: "#cf777a"
+          }}
+        >
+          CATEGORIAS
+        </NavLink>
+        <NavLink
+          to="/tienda"
+          activeStyle={{
+            color: "#cf777a"
+          }}
+        >
+          TIENDA
+        </NavLink>
+        <NavLink
+          to="/contacto"
+          activeStyle={{
+            color: "#cf777a"
+          }}
+        >
+          CONTACTO
+        </NavLink>
       </div>
-      <div className="nav_box">
-        <Link to="/" className="link_nav_shop">TIENDA</Link>
-      </div>
-    </nav>
-   );
+    </HeaderNav>
+  );
 }
  
 export default Nav;
