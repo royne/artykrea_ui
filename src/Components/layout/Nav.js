@@ -11,6 +11,8 @@ const HeaderNav = styled.nav`
   left: 0;
   box-sizing: border-box;
   display: flex;
+  background: #1F2327;
+  z-index: 10;
   .box_logo {
     width: 15%;
     display: flex;
@@ -41,6 +43,7 @@ const Nav = () => {
       <div className="box_links">
         <NavLink
           to="/"
+          exact
           activeStyle={{
             color: "#cf777a"
           }}
