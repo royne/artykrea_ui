@@ -8,15 +8,22 @@ import what from '../../assets/images/icons/logo_what.png'
 const HeaderBox = styled.header`
   position: fixed;
   background: #201815;
-  width: 85%;
+  max-width: 100%;
+  min-width: 100%;
   height: 60px;
   top: 0;
   right: 0;
   box-sizing: border-box;
   display:flex;
-  `
+  z-index: 10;
+`
+const BoxBlank = styled.div`
+  width: 15%;
+  height: 60px;
+  background: #1f2327;
+`;
 const Social = styled.div`
-  width: 50%;
+  width: 42%;
   height: 60px;
   display: flex;
   justify-content: flex-start;
@@ -30,7 +37,7 @@ const Social = styled.div`
   }
 `;
 const Info = styled.div`
-  width: 50%;
+  width: 42%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,9 +52,13 @@ const Info = styled.div`
     }
     & span {
       color: #c23c57;
+      font-family: agency;
+      font-size: 1.5rem;
     }
     & p {
-      color: #cf777a;;
+      color: #cf777a;
+      font-family: agency;
+      font-size: 2rem;
     }
   }
 `;
@@ -55,6 +66,7 @@ const Info = styled.div`
 const Header = () => {
   return ( 
     <HeaderBox>
+      <BoxBlank />
       <Social>
         <img src={face} />
         <img src={insta} />
@@ -66,7 +78,7 @@ const Header = () => {
           <span>+ 57 3013622354</span>
         </div>
         <div>
-          <p>Artykrea.shop</p>
+          <p>artykrea.shop</p>
         </div>
       </Info>
     </HeaderBox>

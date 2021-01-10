@@ -1,53 +1,63 @@
 import React, { useEffect } from 'react';
+import styled from '@emotion/styled'
 import Category from './Category';
 import cat1 from '../../assets/images/categories/c1.png'
 import cat2 from '../../assets/images/categories/c2.png'
 import cat3 from '../../assets/images/categories/c3.png'
 import cat4 from '../../assets/images/categories/c4.png'
 import cat5 from '../../assets/images/categories/c5.png'
+import cat6 from '../../assets/images/categories/c6.png'
+
+const Section = styled.div`
+  width: 100%;
+  height: calc(100vh - 160px);
+  background: #${(props) => props.bg};
+  .box_section {
+    display: flex;
+    padding: 2% 5%;
+    box-sizing: border-box;
+    justify-content: space-around;
+    align-items: center;
+  }
+  & > h2 {
+    padding-left: 5%;
+    padding-top: 2%;
+    font-size: 2.2rem;
+    font-weight: normal;
+    font-family: agency;
+  }
+`;
 
 const BoxCategories = () => {
   const items = [
-    { url: cat1, type: 'accesorios' },
-    { url: cat2, type: 'recordatorios' },
-    { url: cat3, type: 'figuras' },
-    { url: cat4, type: 'variedad' },
-    { url: cat5, type: 'pines' }
+    [
+      { url: cat1, type: 'figuras',  name: 'Garfield' },
+      { url: cat2, type: 'recordatorios',  name: 'Concha de Bebe' },
+      { url: cat3, type: 'accesorios',  name: 'Colar Sirenita' },
+    ],
+    [
+      { url: cat4, type: 'pines', name: 'Pines' },
+      { url: cat5, type: 'mugs', name: 'Mugs' },
+      { url: cat6, type: 'prendedores', name: 'Prendedores' }
+    ]
   ]
-
-  useEffect(() => {
-    const animation = () => {
-      const timeInterval = 3000;
-      const slides = ['#slide2', '#slide1', '#slide5', '#slide4', '#slide3']
-      slides.forEach((elm, i) => {
-        const elmId = document.querySelector(elm)
-        if (elmId !== null) {
-          const interval = setInterval(() => {
-            elmId.click()
-            clearInterval(interval)
-          }, timeInterval * (i + 1));
-        }
-      })
-    }
-    const time = () => {
-      setInterval(() => {
-        animation()
-      }, 15000)
-    }
-    animation()
-    time() 
-  })
-
-  return ( 
-    <section id="slider" className="">
-      <input type="radio" name="slider" id="s1" />
-      <input type="radio" name="slider" id="s2" />
-      <input type="radio" name="slider" id="s3" defaultChecked />
-      <input type="radio" name="slider" id="s4" />
-      <input type="radio" name="slider" id="s5" />
-      { items.map((elm, i) => <Category key={elm.type} img={elm.url} typeCategory={elm.type} index={i + 1} />) }
-    </section>
-   );
+  console.log(items[0]);
+  return (
+    <>
+      <Section className="box" bg="CF777A">
+        <h2>CATEGORIAS</h2>
+        <div className="box_section">
+          {items[0].map((elm, i) => <Category key={i} data={elm} bg="pink" />)}
+        </div>
+      </Section>
+      <Section className="box" bg="1F2327">
+        <h2>CATEGORIAS</h2>
+        <div className="box_section">
+          {items[1].map((elm , i) => <Category key={i} data={elm} bg="black" />)}
+        </div>
+      </Section>
+    </>
+  );
 }
  
 export default BoxCategories;

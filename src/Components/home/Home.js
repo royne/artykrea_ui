@@ -29,7 +29,7 @@ const Section = styled.section`
     padding-left: 5%;
     & > h5 {
       font-size: 2rem;
-      color: #1c91ca;
+      color: #c23c57;
       margin-bottom: 10px;
     }
     & > h2 {
@@ -49,7 +49,7 @@ const Section = styled.section`
         position: absolute;
         top: 25%;
         left: 75%;
-        width: 100%;
+        width: 170px;
         font-size: 2rem;
         font-family: absolute;
       }
@@ -67,32 +67,35 @@ const Section = styled.section`
 `;
 
 const Home = () => {
-  return ( 
+  return (
     <Fragment>
       <Header />
       <Nav />
       <Section>
         <div className="home_info home_section">
           <h5>Artykrea</h5>
-          <h2>Diseños, <br/>figuras <br/> y mas...</h2>
+          <h2>
+            Diseños, <br />
+            figuras <br /> y mas...
+          </h2>
         </div>
         <div className="home_img home_section">
           <div className="box_imgs">
-            <img src={img1} className="img_principal"/>
-            <img src={img3} className="label_img"/>
+            <img src={img1} className="img_principal" />
+            <img src={img3} className="label_img" />
             <span>Detalles Especiales</span>
           </div>
-          <img src={img2} className=""/>
+          <img src={img2} className="" />
         </div>
       </Section>
+      <BoxCategories />
       {/* <section className="container_box">
-        <BoxCategories />
       </section>
       <Fotter />
-      <Social />
-      <Construction /> */}
+      <Social /> */}
+      <Construction />
     </Fragment>
-   );
+  );
 }
  
 export default Home;
