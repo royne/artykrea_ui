@@ -4,7 +4,7 @@ import Nav from '../layout/Nav'
 import styled from '@emotion/styled'
 import '../../styles/home.css';
 import img1 from '../../assets/images/unicornio.png'
-import img2 from '../../assets/images/spiral_blue.png'
+import img2 from '../../assets/images/spiral_pink.png'
 import img3 from '../../assets/images/etiqueta.png'
 import text from '../../assets/images/text.png'
 import Social from '../layout/Social';
@@ -63,7 +63,7 @@ const Section = styled.section`
       left: 55%;
       width: 80%;
     }
-    .img_spin{
+    .img_spin {
       position: absolute;
       width: 150%;
       bottom: 0;

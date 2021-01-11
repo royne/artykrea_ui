@@ -11,14 +11,18 @@ const HeaderNav = styled.nav`
   left: 0;
   box-sizing: border-box;
   display: flex;
-  background: #1F2327;
+  background: #1f2327;
   z-index: 10;
   .box_logo {
+    position: relative;
     width: 15%;
     display: flex;
     justify-content: center;
     & > img {
-      max-height: 100px;
+      position: absolute;
+      top: 0;
+      transform: translateY(-20%);
+      max-height: 120px;
     }
   }
   .box_links {
@@ -30,6 +34,9 @@ const HeaderNav = styled.nav`
     font-size: 2.2rem;
     & > a {
       margin-right: 20px;
+      &:hover {
+        color: #cf777a;
+      }
     }
   }
 `;

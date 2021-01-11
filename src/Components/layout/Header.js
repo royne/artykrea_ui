@@ -7,7 +7,7 @@ import what from '../../assets/images/icons/logo_what.png'
 
 const HeaderBox = styled.header`
   position: fixed;
-  background: #201815;
+  background: #000;
   max-width: 100%;
   min-width: 100%;
   height: 60px;

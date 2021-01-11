@@ -31,14 +31,14 @@ const Section = styled.div`
 const BoxCategories = () => {
   const items = [
     [
-      { url: cat1, type: 'figuras',  name: 'Garfield' },
-      { url: cat2, type: 'recordatorios',  name: 'Concha de Bebe' },
-      { url: cat3, type: 'accesorios',  name: 'Collar Sirenita' },
+      { url: cat1, type: 'Figuras',  name: 'Garfield' },
+      { url: cat2, type: 'Recordatorios',  name: 'Concha' },
+      { url: cat3, type: 'Accesorios',  name: 'Sirenitas' },
     ],
     [
-      { url: cat4, type: 'pines', name: 'Pines' },
-      { url: cat5, type: 'mugs', name: 'Mugs' },
-      { url: cat6, type: 'prendedores', name: 'Prendedores' }
+      { url: cat4, type: 'Pines', name: 'Pines' },
+      { url: cat5, type: 'Mugs', name: 'Mugs' },
+      { url: cat6, type: 'Prendedores', name: 'Prendedores' }
     ]
   ]
   console.log(items[0]);
