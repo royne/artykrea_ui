@@ -6,6 +6,10 @@
   font-family: agency;
   src: url('../assets/fonts/agency-fb_[allfont.es].ttf');
 }
+@font-face{
+  font-family: CaviarDreams;
+  src: url('../assets/fonts/CaviarDreams_Bold.ttf');
+}
 
 h1,h2,h3,h4,h5,h6{
   font-family: absolute, 'Roboto';

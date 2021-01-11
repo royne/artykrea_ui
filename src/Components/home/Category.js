@@ -10,7 +10,7 @@ const Card = styled.div`
   display: flex;
   background: url(${patern});
   background-size: contain;
-  background-color: ${(props) => (props.bg === "pink" ? "#C7596B" : "#12181C")};
+  background-color: ${(props) => (props.bg === "pink" ? "#D07C8F" : "#12181C")};
   padding: 2%;
   justify-content: center;
   align-items: flex-end;
@@ -18,6 +18,12 @@ const Card = styled.div`
   & > img {
     max-height: 80%;
     max-width: 80%;
+    transition: all 1s ease-in-out;
+    &:hover {
+      transform: scale(1.4);
+      z-index: 5;
+      cursor:pointer;
+    }
   }
 `; 
 const BoxType = styled.div`
@@ -30,9 +36,9 @@ const BoxType = styled.div`
   justify-content: center;
   align-items: center;
   background-color: ${(props) => (props.bg === "pink" ? "#1F2327" : "#CF777A")};
-  &>span{
-    font-family: absolute;
-    font-size: 2rem;
+  & > span {
+    font-family: CaviarDreams;
+    font-size: 1.2rem;
   }
 `;
 const CardFoot = styled.div`
@@ -49,8 +55,9 @@ const CardFoot = styled.div`
   justify-content: space-between;
   align-items: center;
   & > p {
-    font-size: 1.7rem;
-    font-family: absolute;
+    font-size: 1.6rem;
+    font-family: CaviarDreams;
+    line-height:1;
   }
   .btn {
     width: 30%;
@@ -60,10 +67,12 @@ const CardFoot = styled.div`
     background: #191c1f;
     font-size: 1.5rem;
     font-family: absolute;
-    &:hover{
+    transition: all 1s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
       font-weight: bold;
       cursor: pointer;
-      box-shadow: 0 5px 10px rgba(0,0,0,0,0.7);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
     }
   }
 `;

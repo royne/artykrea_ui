@@ -33,7 +33,7 @@ const BoxCategories = () => {
     [
       { url: cat1, type: 'figuras',  name: 'Garfield' },
       { url: cat2, type: 'recordatorios',  name: 'Concha de Bebe' },
-      { url: cat3, type: 'accesorios',  name: 'Colar Sirenita' },
+      { url: cat3, type: 'accesorios',  name: 'Collar Sirenita' },
     ],
     [
       { url: cat4, type: 'pines', name: 'Pines' },
@@ -44,7 +44,7 @@ const BoxCategories = () => {
   console.log(items[0]);
   return (
     <>
-      <Section className="box" bg="CF777A">
+      <Section className="box" bg="D99AA4">
         <h2>CATEGORIAS</h2>
         <div className="box_section">
           {items[0].map((elm, i) => <Category key={i} data={elm} bg="pink" />)}

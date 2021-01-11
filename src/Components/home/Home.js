@@ -4,8 +4,9 @@ import Nav from '../layout/Nav'
 import styled from '@emotion/styled'
 import '../../styles/home.css';
 import img1 from '../../assets/images/unicornio.png'
-import img2 from '../../assets/images/espiral.png'
+import img2 from '../../assets/images/spiral_blue.png'
 import img3 from '../../assets/images/etiqueta.png'
+import text from '../../assets/images/text.png'
 import Social from '../layout/Social';
 import BoxCategories from './BoxCategories';
 import Fotter from '../layout/Fotter';
@@ -27,14 +28,13 @@ const Section = styled.section`
     width: 30%;
     align-items: flex-start;
     padding-left: 5%;
-    & > h5 {
-      font-size: 2rem;
-      color: #c23c57;
-      margin-bottom: 10px;
+    & > img {
+      width: 100%;
     }
-    & > h2 {
-      font-size: 4.5rem;
-      font-family: agency;
+    & > h5 {
+      font-size: 2.5rem;
+      color: #c23c57;
+      font-weight: normal;
     }
   }
   .home_img {
@@ -63,6 +63,14 @@ const Section = styled.section`
       left: 55%;
       width: 80%;
     }
+    .img_spin{
+      position: absolute;
+      width: 150%;
+      bottom: 0;
+      left: 0;
+      transform: translateX(-20%);
+      z-index: -1;
+    }
   }
 `;
 
@@ -74,18 +82,15 @@ const Home = () => {
       <Section>
         <div className="home_info home_section">
           <h5>Artykrea</h5>
-          <h2>
-            Diseños, <br />
-            figuras <br /> y mas...
-          </h2>
+          <img src={text} />
         </div>
         <div className="home_img home_section">
           <div className="box_imgs">
             <img src={img1} className="img_principal" />
             <img src={img3} className="label_img" />
             <span>Detalles Especiales</span>
+            <img src={img2} className="img_spin" />
           </div>
-          <img src={img2} className="" />
         </div>
       </Section>
       <BoxCategories />
