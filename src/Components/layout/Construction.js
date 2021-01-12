@@ -2,12 +2,12 @@ import React from 'react';
 import franja from '../../assets/images/franja.svg'
 
 const Construction = () => {
-  return ( 
+  return (
     <article className="bar_construction">
-      <img src={franja} />
+      <img src={franja} alt="artykrea" />
       <span>En construcción</span>
     </article>
-   );
+  );
 }
  
 export default Construction;

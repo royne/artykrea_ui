@@ -1,17 +1,22 @@
-import React, {Fragment} from 'react';
-import ButtonProduct from './ButtonProduct';
+import React from 'react';
+import { Link } from "react-router-dom";
+import { Card, CardFoot, BtnView, BtnPay, BoxPrice, CardFootBtns } from "../ui/Card";
 
-const Product = ({record}) => {
-  return ( 
-    <Fragment>
-      <div className="product">
-        <div className="product_content">
-          <img src={record.image_url} />
-        </div>
-        <ButtonProduct />
-      </div>
-    </Fragment>
-   );
-}
- 
+const Product = ({ data, bg }) => {
+  
+  return (
+    <Card bg={bg}>
+      <img src={data.image_url} />
+      <CardFoot bg={bg}>
+        <p>{data.name}</p>
+        <BoxPrice>${data.price}</BoxPrice>
+      </CardFoot>
+      <CardFootBtns>
+        <BtnView bg={bg}>VER</BtnView>
+        <BtnPay>COMPRAR</BtnPay>
+      </CardFootBtns>
+    </Card>
+  );
+};
+
 export default Product;

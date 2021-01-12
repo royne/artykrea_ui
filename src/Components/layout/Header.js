@@ -68,13 +68,13 @@ const Header = () => {
     <HeaderBox>
       <BoxBlank />
       <Social>
-        <img src={face} />
-        <img src={insta} />
-        <img src={car} />
+        <img src={face} alt="facebook"/>
+        <img src={insta} alt="instagram"/>
+        <img src={car} alt="carrito"/>
       </Social>
       <Info>
         <div>
-          <img src={what} />
+          <img src={what} alt="whatsapp"/>
           <span>+ 57 3013622354</span>
         </div>
         <div>

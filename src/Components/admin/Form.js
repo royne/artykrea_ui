@@ -77,7 +77,7 @@ const Form = () => {
         <div onClick={sendForm} className="input_btn">enviar</div>
       </form>
 
-      {data.image_url && <img src={data.image_url} className="form_img" height="300" width="300"/>}
+      {data.image_url && <img src={data.image_url} className="form_img" height="300" width="300" alt="artykrea"/>}
 
       {hideSpinner && <Spinner />}
     </Fragment> 

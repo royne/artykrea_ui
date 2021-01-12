@@ -1,35 +1,48 @@
 import React, {useState, useEffect} from 'react';
+import styled from '@emotion/styled'
 import {useParams} from "react-router-dom";
-import Product from './Product';
+import { Section } from '../layout/Section'
+import Product from '../products/Product'
 
-const BoxProducts = (props) => {
+const BoxSection = styled.section`
+  width: 100%;
+  height: auto;
+  margin-top: 170px;
+  padding: 2% 5%;
+  display: flex;
+  box-sizing: border-box;
+`
+
+const BoxProducts = () => {
   const [items, setItems] = useState([])
   const {category} = useParams()
   
   useEffect(() => {
+    if (Object.keys(items).length === 0) {
     const getProducts = () => {
       // const url = `https://atkapi.herokuapp.com/api/v1/products?type=${category}`
-      const url = `http://localhost:4000/api/v1/products?type=${category}`
+      const url = `http://localhost:4000/api/v1/products?type=${category}`;
       fetch(url)
-        .then(response => response.json())
-        .then(data => {
-          setItems(data)
-        })
+        .then((response) => response.json())
+        .then((data) => {
+          setItems(data);
+        });
+    };
+      getProducts();
     }
-    if (Object.keys(items).length === 0) {
-      getProducts()
-    }
-  }, [])
-
+  }, [category, items]);
 
   return (
-    <section className="box_products">
-      <h1>{category}</h1>
-      <div className="container_products">
-        {items ? items.map(elm => <Product record={elm} key={elm.id} />) : null}
-      </div>
-    </section> 
-   );
+    <BoxSection>
+      <Section bg="1F2327" resourceType="product">
+        <h2>{category}</h2>
+        <div className="box_section">
+          {items &&
+            items.map((elm, i) => <Product key={i} data={elm} bg="black" />)}
+        </div>
+      </Section>
+    </BoxSection>
+  );
 }
  
 export default BoxProducts;
